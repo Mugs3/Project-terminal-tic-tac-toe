@@ -32,5 +32,13 @@ function validateMove(move, board) {
             - Return true
 */
 export function makeMove(board, move, player) {
-    return false;
+
+    if(!validateMove(move, board)) {
+       return false;
+    }
+
+    const [row, column] = move.split(',').map(Number); board[row -1][column -1] = player;
+
+    return true;
+     
 }
