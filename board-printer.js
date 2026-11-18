@@ -16,6 +16,21 @@
     Test your function by calling it with an example tic-tac-toe board.
 */
 export function printBoard(board) {
+  console.clear();
+  console.log("\n");
+  for (let row = 0; row < 3; row++) {
+    let line = "";
+    for (let col = 0; col < 3; col++) {
+      line += ` ${board[row][col]} `;
+      if (col < 2) {
+        line += "|";
+      }
+    }
+    console.log(line);
+    if (row < 2) {
+      console.log("=============");
+    }
+  }
 }
 
 /*
@@ -24,4 +39,8 @@ export function printBoard(board) {
         - return false if there are still moves that can be made
 */
 export function checkIfNoMovesLeft(board) {
+  if (board.length === 0) {
+    return true;
+  }
+  return board.every((row) => !row.includes("-"));
 }
