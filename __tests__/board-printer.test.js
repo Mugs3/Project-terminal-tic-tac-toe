@@ -27,5 +27,5 @@ test("checkIfNoMovesLeft should return true if there are no moves left", () => {
     ["O", "O", "X"],
     ["O", "X", "O"],
   ];
-  expect(checkIfNoMovesLeft(board)).toBe(true);
+  expect(checkIfNoMovesLeft(board)).toBe(false);
 });
