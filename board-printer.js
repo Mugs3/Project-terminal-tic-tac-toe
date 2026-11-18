@@ -42,5 +42,5 @@ export function checkIfNoMovesLeft(board) {
   if (board.length === 0) {
     return true;
   }
-  return board.some((row) => !row.includes("-"));
+  return board.every((row) => !row.includes("-"));
 }
